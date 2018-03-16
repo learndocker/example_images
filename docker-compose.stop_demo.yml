@@ -1,0 +1,7 @@
+version: "3.4"
+
+services:
+  stop_demo_latest:
+    image: jfahrer/stop_demo:latest
+    build:
+      context: stop_demo/latest
