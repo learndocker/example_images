@@ -1,0 +1,57 @@
+version: "3.4"
+
+services:
+  swarm-demo-frontend_v1:
+    image: jfahrer/swarm-demo-frontend:v1
+    build:
+      context: swarm-demo-frontend/v1
+
+  swarm-demo-frontend_v2:
+    image: jfahrer/swarm-demo-frontend:v2
+    build:
+      context: swarm-demo-frontend/v2
+
+  swarm-demo-frontend_v3:
+    image: jfahrer/swarm-demo-frontend:v3
+    build:
+      context: swarm-demo-frontend/v3
+
+  swarm-demo-frontend_v4:
+    image: jfahrer/swarm-demo-frontend:v4
+    build:
+      context: swarm-demo-frontend/v4
+
+  swarm-demo-frontend_v5:
+    image: jfahrer/swarm-demo-frontend:v5
+    build:
+      context: swarm-demo-frontend/v5
+
+  swarm-demo-frontend_v6:
+    image: jfahrer/swarm-demo-frontend:v6
+    build:
+      context: swarm-demo-frontend/v6
+
+  swarm-demo-frontend_v7:
+    image: jfahrer/swarm-demo-frontend:v7
+    build:
+      context: swarm-demo-frontend/v7
+
+  swarm-demo-frontend_v8:
+    image: jfahrer/swarm-demo-frontend:v8
+    build:
+      context: swarm-demo-frontend/v8
+
+  swarm-demo-frontend_v9:
+    image: jfahrer/swarm-demo-frontend:v9
+    build:
+      context: swarm-demo-frontend/v9
+
+  swarm-demo-frontend_v10:
+    image: jfahrer/swarm-demo-frontend:v10
+    build:
+      context: swarm-demo-frontend/v10
+
+  swarm-demo-frontend_v11:
+    image: jfahrer/swarm-demo-frontend:v11
+    build:
+      context: swarm-demo-frontend/v11

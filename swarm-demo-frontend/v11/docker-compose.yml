@@ -1,0 +1,31 @@
+version: "3.4"
+
+services:
+  frontend:
+    image: jfahrer/swarm-demo-frontend:v11
+    env_file:
+      - config/app.env
+    healthcheck:
+      test: curl -f http://localhost:8080/status || false
+      interval: 2s
+      retries: 3
+      start_period: 3s
+
+  db:
+    image: postgres:9.6-alpine
+    volumes:
+      - pg-data:/var/lib/postgresql/data
+    env_file:
+      - config/db.env
+    healthcheck:
+      test: echo "SELECT * FROM requests LIMIT 1" | psql -h localhost -U $$POSTGRES_USER || exit 1
+      interval: 10s
+      retries: 2
+      start_period: 2m
+
+  lb:
+    image: jfahrer/swarm-demo-lb:v1
+    environment:
+      - PROXY_UPSTREAM=frontend:8080
+    ports:
+      - 80:80
