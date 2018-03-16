@@ -1,0 +1,7 @@
+version: "3.4"
+
+services:
+  envsubst_latest:
+    image: jfahrer/envsubst:latest
+    build:
+      context: envsubst/latest
