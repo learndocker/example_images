@@ -1,0 +1,30 @@
+version: '3.4'
+
+services:
+  nginx-latest:
+    image: jfahrer/nginx:latest
+    build:
+      context: nginx/stretch
+      args:
+        - NGINX_PKG_TYPE=full
+
+  nginx-full:
+    image: jfahrer/nginx:stretch-full
+    build:
+      context: nginx/stretch
+      args:
+        - NGINX_PKG_TYPE=full
+
+  nginx-light:
+    image: jfahrer/nginx:stretch-light
+    build:
+      context: nginx/stretch
+      args:
+        - NGINX_PKG_TYPE=light
+
+  nginx-extras:
+    image: jfahrer/nginx:stretch-extras
+    build:
+      context: nginx/stretch
+      args:
+        - NGINX_PKG_TYPE=extras
