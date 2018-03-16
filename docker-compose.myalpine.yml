@@ -1,0 +1,19 @@
+version: "3.4"
+
+services:
+  bash:
+    image: jfahrer/myalpine:latest
+    build:
+      context: myalpine/latest
+
+  bash:
+    image: jfahrer/myalpine:bash
+    build:
+      context: myalpine/latest
+
+  zsh:
+    image: jfahrer/myalpine:zsh
+    build:
+      context: myalpine/latest
+      args:
+        - MYSHELL=zsh
