@@ -1,0 +1,22 @@
+version: "3.4"
+
+services:
+  lb_latest:
+    image: jfahrer/lb:latest
+    build:
+      context: lb/v3
+
+  lb_v3:
+    image: jfahrer/lb:v3
+    build:
+      context: lb/v3
+
+  lb_v2:
+    image: jfahrer/lb:v2
+    build:
+      context: lb/v2
+
+  lb_v1:
+    image: jfahrer/lb:v1
+    build:
+      context: lb/v1
