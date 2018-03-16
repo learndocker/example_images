@@ -1,0 +1,7 @@
+version: "3.4"
+
+services:
+  swarm-demo-lb_v1:
+    image: jfahrer/swarm-demo-lb:v1
+    build:
+      context: swarm-demo-lb/v1
