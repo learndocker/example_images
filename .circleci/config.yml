@@ -1,0 +1,22 @@
+---
+jobs:
+  build:
+    docker:
+      - image: docker:17.12.0-ce-git
+    working_directory: /app
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Installing dependencies
+          command: |
+            set -x
+            apk add --no-cache --no-progress bash py-pip
+            pip install --quiet docker-compose
+      - run:
+          name: Signing in to Docker Hub
+          command: docker login -u $DOCKER_USER -p $DOCKER_PASS
+      - run:
+          name: Building and pushing images
+          command: |
+            ./build.sh
