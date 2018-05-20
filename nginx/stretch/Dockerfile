@@ -18,3 +18,5 @@ CMD ["/usr/sbin/nginx", "-g", "daemon off;"]
 EXPOSE 80
 
 STOPSIGNAL SIGQUIT
+
+LABEL maintainer="julian@learndocker.online" website="https://LearnDocker.online"

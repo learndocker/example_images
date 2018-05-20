@@ -6,3 +6,5 @@ COPY proxy.conf /etc/nginx/conf.d/default.template
 COPY start.sh /
 
 CMD ["/start.sh"]
+
+LABEL maintainer="julian@learndocker.online" website="https://LearnDocker.online"

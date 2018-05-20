@@ -7,3 +7,5 @@ COPY docker-entrypoint.sh /
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD ["nginx", "-g", "daemon off;"]
+
+LABEL maintainer="julian@learndocker.online" website="https://LearnDocker.online"

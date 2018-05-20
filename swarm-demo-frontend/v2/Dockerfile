@@ -10,3 +10,5 @@ COPY . .
 EXPOSE 8080
 
 CMD ["/usr/local/bin/bundle", "exec", "ruby", "app.rb"]
+
+LABEL maintainer="julian@learndocker.online" website="https://LearnDocker.online"

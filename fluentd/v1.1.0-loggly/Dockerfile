@@ -8,3 +8,5 @@ COPY start-fluentd.sh /
 ENV FLUENTD_CONF=docker.conf
 
 CMD ["/start-fluentd.sh"]
+
+LABEL maintainer="julian@learndocker.online" website="https://LearnDocker.online"

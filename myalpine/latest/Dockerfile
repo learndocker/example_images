@@ -12,3 +12,5 @@ RUN apk update \
 ENV PS1="\h:\w# " PS2=">> "
 
 CMD ["sh", "-c", "$MYSHELL"]
+
+LABEL maintainer="julian@learndocker.online" website="https://LearnDocker.online"
