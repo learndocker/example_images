@@ -1,7 +1,7 @@
 version: "3.4"
 
 services:
-  bash:
+  latest:
     image: jfahrer/myalpine:latest
     build:
       context: myalpine/latest
